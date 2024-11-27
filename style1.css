@@ -1,0 +1,250 @@
+/* COLOR PALETTE */
+:root {
+    --dark-green: #3c8453;
+    --sandy-beige: #bcaa96;
+    --dark-gray: #222222;
+    --light-gray: #d3d4d6;
+    --off-white: #f6f6f6;
+}
+
+/* GLOBAL -------------------- */
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--off-white);
+    margin: 0;
+    font-family: "Exo", sans-serif;
+}
+
+p {
+    font-family: "Exo", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Ga Maamli", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    width: 800px;
+    padding: 10px;
+}
+
+.wall1 {
+    position: absolute;
+    top: 10%;
+    right: 25%;
+    font-size: 80px;
+}
+
+.wall2 {
+    position: absolute;
+    top: 30%;
+    right: 25%;
+}
+
+/* Links -------------------- */
+a {
+    color: var(--dark-green);
+}
+
+a:hover {
+    color: var(--sandy-beige);
+}
+
+.btn {
+    background: #39469a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8%;
+    padding: 10px 20px;
+}
+
+/* Home ---------------------- */
+.home {
+    background-image: url(./study.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.home .content-wrapper {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex: 1 0 auto;
+}
+
+.container {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    justify-content: space-between;
+}
+
+/* Resume ------------------- */
+.resume header::before {
+    background-image: url(./placeholder-images/bg-home-office-studio.jpg);
+    background-size: cover;
+    display: block;
+    height: 575px;
+    content: " ";
+}
+
+.resume-section {
+    margin-bottom: 30px;
+    background: #f1f1f1; /* Light gray background */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.resume-section h2 {
+    border-bottom: 2px dashed var(--light-gray);
+    margin-bottom: 10px;
+}
+
+.download-resume {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    background-color: rgb(55, 132, 232);
+}
+
+.btn-position {
+    position: fixed;
+    top: 15px;
+    right: 5px;
+}
+
+/* Education Table ------------------ */
+table {
+    width: 80%; /* Adjusted width */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+}
+
+th {
+    background-color: var(--dark-green);
+    color: white;
+}
+
+td {
+    background-color: var(--off-white);
+}
+
+/* Table Styling (Centering) */
+table {
+    width: 90%; /* Make sure the table takes up the full container width */
+    margin: 0 auto; /* Center the table on the page */
+    border-radius: 8px; /* Rounded corners for the table */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a clean look */
+}
+
+/* Projects ------------------ */
+.project {
+    display: flow-root;
+    margin: 15px 0;
+}
+
+.project img {
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+}
+
+/* Achievements -------------- */
+.achieve-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+    justify-self: start;
+    align-items: center;
+}
+
+.achieve-item img {
+    width: 300px;
+}
+
+/* Footer -------------------- */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+footer a {
+    color: var(--sandy-beige);
+}
+
+footer a:hover {
+    color: var(--dark-green);
+}
+
+.social {
+    list-style: none;
+    display: flex;
+}
+
+.social li {
+    margin-right: 10px;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease;
+}
+
+.social img:hover {
+    opacity: 0.8;
+}
+
+/* Media Queries ------------------ */
+@media (max-width: 768px) {
+    .content-wrapper {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .wall1, .wall2 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .project img {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
